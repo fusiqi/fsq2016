@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+		<style>
+		    *{ margin: 0; padding: 0; }
+		    ul,ol{ list-style: none;}
+		    
+		    .fp-controlArrow{ display: none; }
+		    #fp-nav ul li a span{  background-color: #fff;  }
+		    
+		    /* 导航分区 */
+		    .nav{ height:80px;  background: #333;position: fixed; width: 100%; z-index:10 ; }
+		    .nav li{float: left;}
+		    .nav a{ color:#fff; text-decoration: none; float: left;height:80px; line-height: 80px; padding: 0 30px;  }
+		    
+		</style>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.fullPage.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$(function(){
+		    $('#box').fullpage({
+		        anchors:['page1', 'page2','page3', 'page4'],          // 锚点
+		        paddingTop: 80,                                       // 防止被固定定位的导航遮住
+		        verticalCentered: false,                              // 是否居中
+		        slidesNavigation: true,                               // 是否开启焦点图指示器
+		        continuousVertical: true,                             // 是否无缝滚动
+		        navigation: true,                                     // 是否开启导航指示器
+		        sectionsColor:['skyblue','pink','gold','purple']      // 分区颜色
+		    });
+		})
+		</script>
+	</head>
+	<body>
+	    <nav class="nav">
+    	    <ul>
+                <li><a href="#">banner</a></li>
+                <li><a href="../app01/index.html">App1</a></li>
+                <li><a href="../app02/index2.html">App2</a></li>
+                <li><a href="../店铺/index3.html">店铺装修</a></li>
+                <li><a href="../主题/index3.html">icon展示</a></li>
+    	    </ul>
+	    </nav>
+        <div id="box">
+            <div class="section">
+              
+                 <div class="slide"><img src="img/2.jpg"/></div>
+                 <div class="slide"><img src="img/3.jpg"/></div>              
+                
+            </div>
+         
+            
+        </div>
+	    
+	    
+	</body>
+</html>
